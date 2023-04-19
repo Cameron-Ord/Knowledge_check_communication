@@ -1,32 +1,38 @@
 <template>
   <div class="omega_parent">
     <header class="page_header">
+      <span>
+
+        <h1>LOGO</h1>
+
+
+        <h2>MENU</h2>
+
+      </span>
+
 
 
     </header>
     <main class="page_main">
       <section>
         <article>
-          <span v-for="user in users" :key="user" :post="user" class="user_profile">
+          <span class="user_profile">
 
-            <h1>{{ user[`name`] }}</h1>
-
-            <p>{{ user[`age`] }}</p>
-
-            <p>{{ user[`is_premium`] }}</p>
-
-            <p>{{ user[`id`] }}</p>
+            <small-user-profile v-for="(user, i) in users" :key="i" :user="users[i]"></small-user-profile>
 
           </span>
-        </article>
-        <article>
-
-          <small-user-profile></small-user-profile>
-
         </article>
       </section>
     </main>
     <footer class="page_footer">
+
+      <span>
+
+        <h1>Footer text</h1>
+
+        <h1>Footer text</h1>
+
+      </span>
 
 
     </footer>

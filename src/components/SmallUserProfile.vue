@@ -7,6 +7,10 @@
 
             <p> {{ user[`is_premium`] }}</p>
 
+            <h5 v-if="user[`is_premium`] === true ">PREMIUM USER</h5>
+
+            <p v-else>BASIC</p>
+
         </span>
 
     </div>
@@ -19,7 +23,7 @@
         props: {
 
 
-            post: Object
+            user: Object,
 
 
         }
