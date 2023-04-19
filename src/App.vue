@@ -18,7 +18,19 @@
         <article>
           <span class="user_profile">
 
-            <small-user-profile v-for="(user, i) in users" :key="i" :user="users[i]"></small-user-profile>
+            <small-user-profile v-for="(user, i) in users" :key="i" :user="users[i]" @user_click="show_user_id">
+            
+            
+            
+            
+            
+            </small-user-profile>
+
+          </span>
+
+          <span>
+
+            <h1>{{ username }}</h1>
 
           </span>
         </article>
@@ -45,9 +57,31 @@ import SmallUserProfile from './components/SmallUserProfile.vue';
 
 export default {
 
+  methods:{
+
+    show_user_id(id){
+
+
+      this.username = id;
+
+
+      console.log(`I work`);
+
+    }
+
+  },
+
 
   data() {
     return {
+
+      username:{
+
+
+
+      },
+
+
       users: [{
 
 

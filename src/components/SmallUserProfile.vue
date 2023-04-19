@@ -11,6 +11,8 @@
 
             <p v-else>BASIC</p>
 
+            <button @click="user_click" >CLICK ME</button>
+
         </span>
 
     </div>
@@ -25,6 +27,16 @@
 
             user: Object,
 
+
+        },
+
+
+        methods:{
+
+            user_click(){
+
+                this.$emit(`user_click`, this.user[`id`]);
+            }
 
         }
     }
